@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clementine boilerplate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>pudding</title>
 </head>
 
 <body>
-    <div class="container">
-        <img src="/public/img/ProPud.png" />
-    </div>
-
-    <div class="container">
-        <p>Du har ätit <span id="click-nbr"></span> pudding.</p>
-        <div class="btn-container">
-            <button type="submit" class="btn btn-add">En till</button>
-            <button class="btn btn-delete">Nollställ</button>
+    <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+        <div class="col-md-4">
+            <div class="mr-auto m-3">
+                <img src="/public/img/ProPud.png" />
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center flex-column">
+            <p>Du har ätit pudding.</p>
+            <div class="btn-container">
+                <button type="submit" class="btn btn-add">En till</button>
+                <button class="btn btn-delete">Nollställ</button>
+            </div>
+            <p class="mt-2">Du har ätit <span id="click-nbr"></span> pudding.</p>
+            <p class="mt-2 mt-auto"><a href="">Github</a></p>
         </div>
     </div>
     <script type="text/javascript" src="/controllers/clickController.client.js"></script>
