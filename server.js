@@ -4,10 +4,15 @@ const express = require('express');
 const routes = require('./app/routes/index.js');
 const mongo = require('mongodb').MongoClient;
 const app = express();
-const port = 3000;
+
+//LOCALHOST SETUP
+// const port = 3000;
 // const mongoUrl = 'mongodb://localhost:27017/pudding';
-//connecting to cloudnode Mongo via env vaiable
+
+//CLOUDNODE SETUP
+const port = process.env['app_port'];
 const mongoUrl = process.env['mongodb'];
+
 
 
 mongo.connect(mongoUrl, (err, db) => {
