@@ -4,7 +4,11 @@
     const addBtn = document.querySelector('.btn-add');
     const deleteBtn = document.querySelector('.btn-delete');
     const clickNbr = document.getElementById('click-nbr');
-    const apiUrl = 'http://localhost:3000/api/clicks';
+    //LOCALHOST SETUP
+    // const apiUrl = 'http://localhost:3000/api/clicks';
+
+    //CLOUDNODE SETUP
+    const apiUrl = 'http://pudding.cloudno.de/api/clicks';
 
     //making our own jquery $ready sort of...
     function ready(fn) {
