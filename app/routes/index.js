@@ -16,7 +16,10 @@ module.exports = function(app, db) {
 
     //defining a new route for our API
     app.route('/api/clicks')
-        //The getClicks function will be executed anytime there is an HTTP GET request on the /api/clicks URL
+        //depending on the HTTP method, the corresponding clickhandler method is run.
+        //for example getClicks when HTTP GET request on the /api/clicks URL
         .get(clickhandler.getClicks)
+        .post(clickhandler.addClick)
+        .delete(clickhandler.resetClicks)
 
 }

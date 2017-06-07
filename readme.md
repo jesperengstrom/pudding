@@ -1,3 +1,5 @@
-# Readme
+# Yooo
 
-Architechure was set up using Clementine.js (boilerplate)<http://www.clementinejs.com/tutorials/tutorial-beginner.html>
+Simple MVC web app boilerplate-ish thing (Node/Express server + MongoDb database + Rest API, client side controller + view)
+
+With help from [Clementine.js tutorial](http://www.clementinejs.com/tutorials/tutorial-beginner.html)

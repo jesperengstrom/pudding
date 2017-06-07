@@ -4,7 +4,7 @@ function clickHandler(db) {
     let clicks = db.collection('clicks');
 
     //functionality will be contained within a getClicks() method of the clickHandler function object.
-    this.getClicks = (err, res) => {
+    this.getClicks = (req, res) => {
 
         var clickProjection = { '_id': false };
 
@@ -26,6 +26,20 @@ function clickHandler(db) {
                     }
                 })
             }
+        });
+    }
+    this.addClick = (req, res) => {
+        clicks.findAndModify({}, { _id: 1 }, { $inc: { 'clicks': 1 } },
+            (err, result) => {
+                if (err) throw err;
+                res.json(result);
+            });
+    }
+    this.resetClicks = (req, res) => {
+        clicks.update({}, { 'clicks': 0 }, (err, result) => {
+            if (err) throw err;
+            res.json(result);
+
         });
     }
 }
