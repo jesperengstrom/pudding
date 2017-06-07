@@ -6,9 +6,11 @@ const mongo = require('mongodb').MongoClient;
 const app = express();
 const port = 3000;
 // const mongoUrl = 'mongodb://localhost:27017/pudding';
+//connecting to cloudnode Mongo via env vaiable
+const mongoUrl = process.env['mongodb'];
 
 
-mongo.connect(mongodb, (err, db) => {
+mongo.connect(mongoUrl, (err, db) => {
     if (err) {
         throw new Error('database failed to connect!');
     } else {
