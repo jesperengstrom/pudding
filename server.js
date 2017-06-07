@@ -5,10 +5,10 @@ const routes = require('./app/routes/index.js');
 const mongo = require('mongodb').MongoClient;
 const app = express();
 const port = 3000;
-const mongoUrl = 'mongodb://localhost:27017/pudding';
+// const mongoUrl = 'mongodb://localhost:27017/pudding';
 
 
-mongo.connect(mongoUrl, (err, db) => {
+mongo.connect(mongodb, (err, db) => {
     if (err) {
         throw new Error('database failed to connect!');
     } else {
